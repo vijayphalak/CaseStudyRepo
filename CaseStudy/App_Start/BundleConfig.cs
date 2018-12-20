@@ -26,5 +26,6 @@ namespace CaseStudy
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
         }
+
     }
 }
