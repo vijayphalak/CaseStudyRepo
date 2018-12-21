@@ -15,6 +15,7 @@ namespace CaseStudy
 
 
 
+
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
