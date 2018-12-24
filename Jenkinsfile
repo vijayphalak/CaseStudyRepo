@@ -4,7 +4,7 @@ pipeline {
 		stage('Deployment to development server'){
 			steps{
 				build 'Development'
-				mail (to: 'vijay.phalak@kpit.com', subject:'Send from pipeline')
+				mail (to: 'vijay.phalak@kpit.com', subject:'Send from pipeline', body:'Pls approve')
 			}			
 		}		
 		stage('Approval for deploying on test server'){
