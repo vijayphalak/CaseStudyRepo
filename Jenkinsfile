@@ -8,7 +8,7 @@ pipeline {
 		}
 		post{
 			always{
-				mail to:vijay.phalak@kpit.com, subject:'Send from pipeline'
+				mail (to: 'vijay.phalak@kpit.com', subject:'Send from pipeline')
 			}
 		}
 		stage('Approval for deploying on test server'){
