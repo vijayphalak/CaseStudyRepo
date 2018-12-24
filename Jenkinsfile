@@ -8,9 +8,9 @@ pipeline {
 		}		
 		stage('Approval for deploying on test server'){			
 			steps{
-				mail to: 'vijay.phalak@kpit.com',subject: "Job '${JOB_NAME}' (${BUILD_NUMBER}) is waiting for input",body: "Please go to ${BUILD_URL}console and verify the build"
+				mail to: 'pooja.tedia@kpit.com',subject: "Job '${JOB_NAME}' (${BUILD_NUMBER}) is waiting for input",body: "Please go to ${BUILD_URL}console and verify the build"
 				timeout(time:2,unit:'DAYS'){
-					input message:'Please approve this request for deployment on test server',submitter:'vijayphalak'
+					input message:'Please approve this request for deployment on test server',submitter:'poojatedia'
 				}
 			}
 		}
@@ -21,8 +21,9 @@ pipeline {
 		}
 		stage('Approval for deploying on production server'){
 			steps{
+				mail to: 'neha.verma@kpit.com',subject: "Job '${JOB_NAME}' (${BUILD_NUMBER}) is waiting for input",body: "Please go to ${BUILD_URL}console and verify the build"
 				timeout(time:2,unit:'DAYS'){
-					input message:'Please approve this request for deployment on production server',submitter:'vijayphalak'
+					input message:'Please approve this request for deployment on production server',submitter:'nehaverma'
 				}
 			}
 		}
