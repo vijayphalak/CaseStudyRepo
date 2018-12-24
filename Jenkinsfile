@@ -4,11 +4,11 @@ pipeline {
 		stage('Deployment to development server'){
 			steps{
 				build 'Development'
-			}
-			post{
-				always{
-					mail to:vijay.phalak@kpit.com, subject:'Send from pipeline'
-				}
+			}			
+		}
+		post{
+			always{
+				mail to:vijay.phalak@kpit.com, subject:'Send from pipeline'
 			}
 		}
 		stage('Approval for deploying on test server'){
