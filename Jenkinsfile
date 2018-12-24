@@ -3,10 +3,14 @@ pipeline {
 	stages{
 		stage('Deployment to development server'){
 			steps{
-				build 'Development'
-				mail (to: 'vijay.phalak@kpit.com', subject:'Send from pipeline', body:'Pls approve')
+				build 'Development'				
 			}			
 		}		
+		post{
+			success{
+				mail (to: 'vijay.phalak@kpit.com', subject:'Send from pipeline', body:'Pls approve')
+			}
+		}
 		stage('Approval for deploying on test server'){
 			steps{
 				timeout(time:2,unit:'DAYS'){
