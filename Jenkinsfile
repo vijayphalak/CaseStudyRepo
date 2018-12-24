@@ -1,5 +1,5 @@
 pipeline {
-	agents	any
+	agent any
 	stages{
 		stage('Deployment to development server'){
 			steps{
