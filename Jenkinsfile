@@ -8,7 +8,7 @@ pipeline {
 		}		
 		stage('Approval for deploying on test server'){			
 			steps{
-				mail (to: 'vijay.phalak@kpit.com', subject:'Send from pipeline', body:'<a href="${BUILD_URL}input">Approve</a>', mimeType:'text/html')
+				mail (to: 'vijay.phalak@kpit.com', subject:'Send from pipeline', body:'<a href="'${BUILD_URL}'">Approve</a>', mimeType:'text/html')
 				timeout(time:2,unit:'DAYS'){
 					input message:'Please approve this request for deployment on test server',submitter:'vijayphalak'
 				}
