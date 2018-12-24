@@ -33,4 +33,9 @@ pipeline {
 			}
 		}
 	}
+	post{
+			success{
+				mail to: 'vijay.phalak@kpit.com,neha.verma@kpit.com',subject: "Job '${JOB_NAME}' (${BUILD_NUMBER}) success",body: "Job get sucess"
+			}
+		}
 }
