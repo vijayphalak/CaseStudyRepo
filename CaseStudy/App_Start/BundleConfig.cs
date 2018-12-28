@@ -22,6 +22,7 @@ namespace CaseStudy
 
 
 
+
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
 
